@@ -18,6 +18,10 @@ html, body {
   padding: 0;
 }
 
+p {
+  line-height: 1.5;
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -103,6 +107,23 @@ header .phone-number a {
 }
 
 
+
+
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  /*color: white;*/
+  /*background-color: white;*/
+      -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0deg, #f3ec78, #af4261);
+  background-clip: text;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+
+
 /* If screen size is more than 600px wide, set the font-size of <div> to 80px */
 @media screen and (min-width: 600px) {
   header input, .nav-toggle-label {
@@ -120,23 +141,43 @@ header .phone-number a {
     display: flex;
     max-height: inherit;
     position: static;
+    justify-content: flex-end;
   }
   header nav li {
     padding: 16px 10px;
   }
+
+
+  footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10px;
+  }
 }
 
 
 
+.hero {
+  background-image: url(/media/images/common/tool-wall.avif);
+  background-size: cover;
+  padding: 20px 30px;
+}
 
-
-.logo {
-  font-size: 40px;
+.hero > div {
+  max-width: 400px;
   font-weight: bold;
-  /*color: white;*/
-  /*background-color: white;*/
-      -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(0deg, #f3ec78, #af4261);
-  background-clip: text;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, .2);
 }
+
+
+
+
+/* Contact page */
+
+#map {
+  height: 300px;
+}
+

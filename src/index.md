@@ -1,10 +1,7 @@
 ---
-title: Hello this is the title
+title: Home
 layout: "base.njk"
 ---
-
-Some content stuff.
-more stuff.
 
 {% include "partials/hero.njk" %}
 
