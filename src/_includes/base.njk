@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>CMIST {{ title }}</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <div>
+    <img src="/media/images/common/CMIST.svg" alt="CMIST logo" height="50" />
+    <div class="phone-number">
+      <img src="/media/images/icons/phone.svg" width="20" height="20" />
+      <a href="tel:01823 971291">01823 971291</a>
+    </div>
+  </div>
+
+  <nav>
+    <input type="checkbox" id="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/facilities">Facilities</a></li>
+      <li><a href="/funding">Funding</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1>Hello</h1>
+
+<main>
+{{ content | safe }}
+</main>
+
+
+</body>
+</html>
