@@ -1,6 +1,8 @@
+
 html {
   box-sizing: border-box;
   font-size: 16px;
+  --primary-color: #67A2AE;
 }
 
 *, *:before, *:after {
@@ -18,9 +20,21 @@ html, body {
   padding: 0;
 }
 
+/* Base typography */
+
 p {
   line-height: 1.5;
+  margin-bottom: 1rem;
 }
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+
+
 
 body {
   font-family: Helvetica, Arial, sans-serif;
@@ -38,7 +52,7 @@ header > div {
 }
 
 header nav, header nav ul {
-  background: #67A2AE;
+  background: var(--primary-color);
 }
 
 header nav ul {
@@ -124,6 +138,8 @@ header .phone-number a {
 
 
 footer {
+  margin-top: 5rem;
+  background: #eee;
   text-align: center;
   padding: 30px 10px;
   display: flex;
@@ -173,7 +189,8 @@ footer {
 .hero {
   background-image: url(/media/images/common/tool-wall.avif);
   background-size: cover;
-  padding: 20px 30px;
+  padding: 20px 10px;
+  margin-bottom: 2rem;
 }
 
 .hero > div {
@@ -182,6 +199,15 @@ footer {
   color: #fff;
   font-size: 1.5rem;
   text-shadow: 0 3px 2px rgba(0, 0, 0, .2);
+}
+.hero p {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 758px) {
+  .hero {
+    padding: 20px 40px;
+  }
 }
 
 
@@ -192,4 +218,82 @@ footer {
 #map {
   height: 300px;
 }
+
+
+
+
+
+
+/* Utility */
+
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+
+/* Medium */
+@media screen and (min-width: 758px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:grid-cols-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+
+}
+
+/* Large */
+@media screen and (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+}
+
+/* Icons */
+.circle-icon {
+  background: var(--primary-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.circle-icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
