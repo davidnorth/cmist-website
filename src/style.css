@@ -3,10 +3,15 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   --primary-color: #67A2AE;
+  --box-radius: 6px;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body {
+  background: #eee;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -27,8 +32,18 @@ p {
   margin-bottom: 1rem;
 }
 
+h1, h2, h3 {
+  font-family: "DM Serif Text", serif;
+}
+
 h1 {
   font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -41,12 +56,13 @@ body {
 }
 
 header {
+  background: white;
 }
 
 header > div {
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 30px 10px;
 }
 #key-info {
 }
@@ -187,7 +203,7 @@ footer {
 
 
 .hero {
-  background-image: url(/media/images/common/tool-wall.avif);
+  background-image: url(/media/images/common/tool-wall.jpg);
   background-size: cover;
   padding: 20px 10px;
   margin-bottom: 2rem;
@@ -197,7 +213,7 @@ footer {
   max-width: 400px;
   font-weight: bold;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-shadow: 0 3px 2px rgba(0, 0, 0, .2);
 }
 .hero p {
@@ -206,7 +222,7 @@ footer {
 }
 @media screen and (min-width: 758px) {
   .hero {
-    padding: 20px 40px;
+    padding: 50px 40px;
   }
 }
 
@@ -216,7 +232,7 @@ footer {
 /* Contact page */
 
 #map {
-  height: 300px;
+  height: 400px;
 }
 
 
@@ -238,6 +254,10 @@ footer {
 
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -263,7 +283,7 @@ footer {
   .md\:grid-cols-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 30px;
+    column-gap: 45px;
   }
 
 }
@@ -295,5 +315,82 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/* Cards */
+
+article.card {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 2rem;
+  border-radius: var(--box-radius);
+
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+  /* extract */
+  box-shadow: 3px 2px 11px 0px rgba(0,0,0,0.15);
+}
+
+article.card > img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: var(--box-radius);
+  border-top-right-radius: var(--box-radius);
+}
+
+article.card .content {
+  padding: 15px 20px;
+  flex-grow: 1;
+}
+article.card .content h3 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+article.card .content p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  article.card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+
+/* Forms */
+
+input {
+}
+
+input, textarea {
+  width: 100%;
+  padding: 6px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #999;
+}
+.field {
+  margin-bottom: 10px;
+}
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+
+
 
 
