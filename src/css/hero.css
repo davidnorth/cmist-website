@@ -1,0 +1,27 @@
+.hero {
+  background-image: url(/media/images/common/tool-wall.jpg);
+  background-size: cover;
+  padding: 20px 10px;
+  margin-bottom: 2rem;
+}
+
+.hero > div {
+  max-width: 400px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.25rem;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, .2);
+}
+.hero p {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 758px) {
+  .hero {
+    padding: 50px 40px;
+  }
+}
+
+
+
+

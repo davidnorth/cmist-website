@@ -1,0 +1,143 @@
+
+header {
+  background: white;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10px;
+}
+#key-info {
+}
+
+header nav, header nav ul {
+  background: var(--primary-color);
+}
+
+header nav ul {
+  list-style: none;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  display: flex;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+
+nav input {
+  /*display: none;*/
+}
+nav input:checked ~ ul {
+  max-height: 250px;
+}
+nav input:checked ~ .nav-toggle-label span {
+  background-image: url("/media/images/icons/cross.svg");
+}
+
+header nav li {
+  padding: 10px 10px;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 1.25em;
+  /*color: rgba(255, 255, 255, 0.8);*/
+  color: white;
+}
+header nav a:hover {
+  color: #3A5056;
+}
+
+
+
+@media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav, header nav ul {
+    background: white;
+  }
+  header nav a {
+    color: #161E21;
+  }
+}
+
+
+
+#nav-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  display: block;
+  padding: 8px;
+}
+.nav-toggle-label span {
+  height: 32px;
+  width: 32px;
+  display: block;
+  background-image: url("/media/images/icons/bars.svg");
+  cursor: pointer;
+}
+
+
+
+
+header .phone-number {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+header .phone-number a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.25em;
+}
+
+
+
+
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  /*color: white;*/
+  /*background-color: white;*/
+      -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0deg, #f3ec78, #af4261);
+  background-clip: text;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+
+
+/* If screen size is more than 600px wide, set the font-size of <div> to 80px */
+@media screen and (min-width: 600px) {
+  header input, .nav-toggle-label {
+    display: none;
+  }
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+  header nav input {
+    display: none;
+  }
+  header nav ul {
+    flex-direction: row;
+    display: flex;
+    max-height: inherit;
+    position: static;
+    justify-content: flex-end;
+  }
+  header nav li {
+    padding: 16px 10px;
+  }
+
+}
+

@@ -1,60 +1,4 @@
 
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  --primary-color: #67A2AE;
-  --box-radius: 6px;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  background: #eee;
-}
-
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-html, body {
-  margin: 0; 
-  padding: 0;
-}
-
-/* Base typography */
-
-p {
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-h1, h2, h3 {
-  font-family: "DM Serif Text", serif;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-
-
-
-body {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 header {
   background: white;
 }
@@ -84,6 +28,7 @@ header nav ul {
   z-index: 9999;
 }
 
+
 nav input {
   /*display: none;*/
 }
@@ -101,11 +46,28 @@ header nav li {
 header nav a {
   text-decoration: none;
   font-size: 1.25em;
-  color: rgba(255, 255, 255, 0.8);
-}
-header nav a:hover {
+  /*color: rgba(255, 255, 255, 0.8);*/
   color: white;
 }
+header nav a:hover {
+  color: #3A5056;
+}
+
+
+
+@media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav, header nav ul {
+    background: white;
+  }
+  header nav a {
+    color: #161E21;
+  }
+}
+
 
 
 #nav-toggle {
