@@ -1,3 +1,6 @@
 .DS_Store
-node_modules
-public/*
+site/node_modules
+site/public/*
+
+cms/node_modules
+cms/public/*
