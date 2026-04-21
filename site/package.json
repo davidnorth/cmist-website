@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "start": "concurrently \"eleventy --serve\" \"node scripts/sanity-watch.js\"",
+    "build": "node scripts/sanity-fetch.js && eleventy"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "@portabletext/to-html": "^5.0.2",
+    "@sanity/client": "^7.21.0"
   }
 }

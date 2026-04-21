@@ -1,0 +1,27 @@
+---
+title: Projects
+layout: "base.njk"
+---
+
+<section class="container mt-1">
+  <h1>Projects</h1>
+
+  {% if projects.length %}
+    <div class="md:grid-cols-3 mb-1">
+      {% for project in projects %}
+        <article class="card">
+          {% if project.imageUrl %}
+            <img src="{{ project.imageUrl }}?w=600&auto=format" alt="{{ project.title }}" />
+          {% endif %}
+          <div class="content">
+            <h3>{{ project.title }}</h3>
+            <a href="/projects/{{ project.slug }}/">Read more</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No projects yet — check back soon.</p>
+  {% endif %}
+
+</section>
