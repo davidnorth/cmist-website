@@ -18,7 +18,7 @@ input, textarea {
 }
 
 button {
-  background: var(--primary-color);
+  background: var(--primary);
   color: white;
   font-weight: bold;
   padding: 8px 10px;

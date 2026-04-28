@@ -1,0 +1,131 @@
+---
+layout: "base.njk"
+title: Design
+permalink: /design/
+eleventyExcludeFromCollections: true
+---
+
+<style>
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    padding: 24px;
+  }
+  .swatch {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--outline-variant);
+    font-family: monospace;
+    font-size: 12px;
+  }
+  .swatch .chip {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px;
+  }
+  .swatch .meta {
+    padding: 8px;
+    background: var(--surface-container-lowest);
+    color: var(--on-surface);
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .swatch .meta .name { font-weight: 700; }
+  .swatch-section {
+    padding: 0 24px;
+    margin-top: 32px;
+  }
+  .swatch-section h2 {
+    font-family: monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+</style>
+
+{% set swatches = [
+  { group: "Surface",
+    items: [
+      { name: "surface",                   on: "on-surface" },
+      { name: "surface-dim",               on: "on-surface" },
+      { name: "surface-bright",            on: "on-surface" },
+      { name: "surface-container-lowest",  on: "on-surface" },
+      { name: "surface-container-low",     on: "on-surface" },
+      { name: "surface-container",         on: "on-surface" },
+      { name: "surface-container-high",    on: "on-surface" },
+      { name: "surface-container-highest", on: "on-surface" },
+      { name: "surface-variant",           on: "on-surface-variant" },
+      { name: "inverse-surface",           on: "inverse-on-surface" },
+      { name: "background",                on: "on-background" },
+      { name: "on-surface",                on: "surface" },
+      { name: "on-surface-variant",        on: "surface" },
+      { name: "inverse-on-surface",        on: "inverse-surface" },
+      { name: "on-background",             on: "background" },
+      { name: "outline",                   on: "surface" },
+      { name: "outline-variant",           on: "on-surface" },
+      { name: "surface-tint",              on: "on-primary" }
+    ] },
+  { group: "Primary",
+    items: [
+      { name: "primary",                   on: "on-primary" },
+      { name: "on-primary",                on: "primary" },
+      { name: "primary-container",         on: "on-primary-container" },
+      { name: "on-primary-container",      on: "primary-container" },
+      { name: "inverse-primary",           on: "primary" },
+      { name: "primary-fixed",             on: "on-primary-fixed" },
+      { name: "primary-fixed-dim",         on: "on-primary-fixed" },
+      { name: "on-primary-fixed",          on: "primary-fixed" },
+      { name: "on-primary-fixed-variant",  on: "primary-fixed" }
+    ] },
+  { group: "Secondary",
+    items: [
+      { name: "secondary",                  on: "on-secondary" },
+      { name: "on-secondary",               on: "secondary" },
+      { name: "secondary-container",        on: "on-secondary-container" },
+      { name: "on-secondary-container",     on: "secondary-container" },
+      { name: "secondary-fixed",            on: "on-secondary-fixed" },
+      { name: "secondary-fixed-dim",        on: "on-secondary-fixed" },
+      { name: "on-secondary-fixed",         on: "secondary-fixed" },
+      { name: "on-secondary-fixed-variant", on: "secondary-fixed" }
+    ] },
+  { group: "Tertiary",
+    items: [
+      { name: "tertiary",                  on: "on-tertiary" },
+      { name: "on-tertiary",               on: "tertiary" },
+      { name: "tertiary-container",        on: "on-tertiary-container" },
+      { name: "on-tertiary-container",     on: "tertiary-container" },
+      { name: "tertiary-fixed",            on: "on-tertiary-fixed" },
+      { name: "tertiary-fixed-dim",        on: "on-tertiary-fixed" },
+      { name: "on-tertiary-fixed",         on: "tertiary-fixed" },
+      { name: "on-tertiary-fixed-variant", on: "tertiary-fixed" }
+    ] },
+  { group: "Error",
+    items: [
+      { name: "error",                on: "on-error" },
+      { name: "on-error",             on: "error" },
+      { name: "error-container",      on: "on-error-container" },
+      { name: "on-error-container",   on: "error-container" }
+    ] }
+] %}
+
+<h1 style="padding: 24px 24px 0;">Timber &amp; Hearth</h1>
+
+{% for section in swatches %}
+<section class="swatch-section">
+  <h2>{{ section.group }}</h2>
+  <div class="swatch-grid">
+    {% for s in section.items %}
+    <div class="swatch">
+      <div class="chip" style="background: var(--{{ s.name }}); color: var(--{{ s.on }});">Aa</div>
+      <div class="meta">
+        <span class="name">--{{ s.name }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

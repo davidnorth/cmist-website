@@ -1,18 +1,16 @@
-
 header {
-  background: white;
+  background: var(--surface-container);
 }
 
 header > div {
   display: flex;
   justify-content: space-between;
-  padding: 30px 10px;
+  padding: 20px 10px;
 }
 #key-info {
 }
 
 header nav, header nav ul {
-  background: var(--primary-color);
 }
 
 header nav ul {
@@ -26,6 +24,7 @@ header nav ul {
   position: absolute;
   width: 100%;
   z-index: 9999;
+  color: #496455;
 }
 
 nav input {
@@ -40,13 +39,16 @@ nav input:checked ~ .nav-toggle-label span {
 
 header nav li {
   padding: 10px 10px;
+  &.active a {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+  }
 }
 
 header nav a {
   text-decoration: none;
   font-size: 1.25em;
-  /*color: rgba(255, 255, 255, 0.8);*/
-  color: white;
+  color: var(--secondary);
 }
 header nav a:hover {
   color: #3A5056;
@@ -58,12 +60,9 @@ header nav a:hover {
   header {
     display: flex;
     justify-content: space-between;
+    padding: 0 40px;
   }
   header nav, header nav ul {
-    background: white;
-  }
-  header nav a {
-    color: #161E21;
   }
 }
 

@@ -1,0 +1,103 @@
+---
+name: Timber & Hearth
+colors:
+  surface: '#fcf9f4'
+  surface-dim: '#dcdad5'
+  surface-bright: '#fcf9f4'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f6f3ee'
+  surface-container: '#f0ede8'
+  surface-container-high: '#ebe8e3'
+  surface-container-highest: '#e5e2dd'
+  on-surface: '#1c1c19'
+  on-surface-variant: '#424844'
+  inverse-surface: '#31302d'
+  inverse-on-surface: '#f3f0eb'
+  outline: '#727973'
+  outline-variant: '#c2c8c2'
+  surface-tint: '#496455'
+  primary: '#173124'
+  on-primary: '#ffffff'
+  primary-container: '#2d4739'
+  on-primary-container: '#98b5a3'
+  inverse-primary: '#b0cdbb'
+  secondary: '#80552c'
+  on-secondary: '#ffffff'
+  secondary-container: '#fec391'
+  on-secondary-container: '#794e26'
+  tertiary: '#462200'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#663500'
+  on-tertiary-container: '#fe942c'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ccead6'
+  primary-fixed-dim: '#b0cdbb'
+  on-primary-fixed: '#062014'
+  on-primary-fixed-variant: '#324c3e'
+  secondary-fixed: '#ffdcc1'
+  secondary-fixed-dim: '#f5bb89'
+  on-secondary-fixed: '#2e1600'
+  on-secondary-fixed-variant: '#653e17'
+  tertiary-fixed: '#ffdcc3'
+  tertiary-fixed-dim: '#ffb77d'
+  on-tertiary-fixed: '#2f1500'
+  on-tertiary-fixed-variant: '#6e3900'
+  background: '#fcf9f4'
+  on-background: '#1c1c19'
+  surface-variant: '#e5e2dd'
+typography:
+  headline-xl:
+    fontFamily: Newsreader
+    fontSize: 48px
+    fontWeight: '600'
+    lineHeight: '1.1'
+  headline-lg:
+    fontFamily: Newsreader
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: '1.2'
+  headline-md:
+    fontFamily: Newsreader
+    fontSize: 24px
+    fontWeight: '500'
+    lineHeight: '1.3'
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: '1.6'
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: '1.6'
+  label-caps:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '700'
+    lineHeight: '1.2'
+    letterSpacing: 0.05em
+  button:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: '1'
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  unit: 8px
+  container-max: 1200px
+  gutter: 24px
+  margin-mobile: 16px
+  stack-sm: 12px
+  stack-md: 24px
+  stack-lg: 48px
+---

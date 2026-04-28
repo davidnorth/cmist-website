@@ -12,7 +12,7 @@ eleventyComputed:
 <section class="container mt-1">
 
   {% if project.imageUrl %}
-    <img src="{{ project.imageUrl }}?w=1200&auto=format" alt="{{ project.title }}" style="width:100%; height:auto; border-radius: var(--box-radius); margin-bottom: 1.5rem;" />
+    <img src="{{ project.imageUrl }}?w=500&auto=format&fit=max" alt="{{ project.title }}" />
   {% endif %}
 
   <h1>{{ project.title }}</h1>
