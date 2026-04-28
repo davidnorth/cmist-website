@@ -36,13 +36,36 @@
   flex: 0 0 500px;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .mt_30 {
   margin-top: 30px;
 }
 
-mb_30 {
+.mb_30 {
   margin-bottom: 30px;
 }
+
+.p_30_0 {
+  padding: 30px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img.with-border {
+  border: 12px solid white;
+  box-shadow: 3px 2px 11px 0px rgba(0,0,0,0.15);
+}
+
+.rotate-2 {
+  transform: rotate(2deg);
+}
+
+
 
 
 /* Medium */

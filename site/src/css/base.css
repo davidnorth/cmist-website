@@ -91,5 +91,23 @@ body {
   flex-direction: column;
   gap: 16px;
   max-width: 400px;
-  
+  img {
+    border-radius: 8px;
+  }
 }
+
+
+.alt-secondary-container {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+  padding: 30px 20px;
+  text-align: center;
+  margin: 3rem 0;
+  text-wrap: balance;
+  @media (width >= 760px) {
+    margin: 4rem auto;
+    max-width: 740px;
+    border-radius: 20px;
+  }
+}
+
