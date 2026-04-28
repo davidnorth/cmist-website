@@ -1,58 +1,61 @@
 ---
 title: Contact
 layout: "base.njk"
+navActive: contact
 ---
 
 
-<section class="mt-1 mb-2 container">
-  <h1>Contact Us</h1>
-  <div class="md:flex gap-30">
+<div class="mt-1 flex gap-30 container">
+  <h1 id="contact-header">Contact Us</h1>
+</div>
+
+<div class="mb-2 flex gap-30 container">
+
+
+  <section class="flex-grow" aria-labeled-by="contact-header">
   <div>
     <p>Email: <a href="mailto:cmist.taunton@gmail.com">
     cmist.taunton@gmail.com
     </a></p>
 
     <p>Tel: <a href="tel:01823 971291">01823 971291</a></p>
-    </div>
-    <div>
 
     <p>CMIST, Unit 1<br />
     Old Engineering Workshops<br />
     Station Approach North<br />
     Taunton Station<br />
     Taunton, TA1 1QP</p>
-    </div>
-  </div>
+  </section>
+
+
+
+    <section class="flex-min-500" aria-labelled-by="form-header">
+    <h2 id="form-header">Send us a message</h3>
+    <form
+      action="https://formspree.io/f/xwpnayrb"
+      method="POST"
+      id="contact-form"
+    >
+      <div class="field">
+        <label>Your name:</label>
+        <input type="email" name="email">
+      </div>
+      <div class="field">
+        <label>Your email:</label>
+        <input type="email" name="email">
+      </div>
+      <div class="field">
+        <label>Message:</label>
+        <textarea name="message" rows="5"></textarea>
+      </div>
+      <button type="submit">Send message</button>
+    </form>
+    </section>
+
+
+  
 </section>
 
-
-<section class="mb-2 container">
-<h2>Send us a message</h3>
-
-<form
-  action="https://formspree.io/f/xwpnayrb"
-  method="POST"
-  id="contact-form"
->
-  <div class="field">
-    <label>Your name:</label>
-    <input type="email" name="email">
-  </div>
-
-  <div class="field">
-    <label>Your email:</label>
-    <input type="email" name="email">
-  </div>
-
-  <div class="field">
-    <label>Message:</label>
-    <textarea name="message" rows="5"></textarea>
-  </div>
-
-  <button type="submit">Send message</button>
-</form>
-
-</section>
 
 <section>
   {% include "./partials/map.njk" %}

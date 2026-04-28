@@ -58,14 +58,21 @@ navActive: home
 
 
     </div>
-    <div>
-      <h2>Latest News</h2>
-      <iframe name="faef823ca5d49fee4" height="589px" data-testid="fb:page Facebook Social Plugin" 
-      title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" 
-      scrolling="no" allow="encrypted-media" 
-      src="https://www.facebook.com/v2.4/plugins/page.php?adapt_container_width=true&amp;app_id=304553036307597&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df7f43e1d0df647f9f%26domain%3Dwww.cmist.uk%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.cmist.uk%252Ff4d5d32a2cd5c7a05%26relation%3Dparent.parent&amp;container_width=0&amp;height=589&amp;hide_cover=true&amp;href=http%3A%2F%2Fwww.facebook.com%2FCommunityMenInShedsTaunton&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;show_posts=true&amp;width=488" 
-      class="" style="border: none; visibility: visible; width: 488px; height: 589px;"></iframe>
+    {% set featured = projects[0] %}
+    {% if featured %}
+    <div class="flex-min-350">
+      <h2>Featured project</h2>
+      <article class="card">
+        {% if featured.imageUrl %}
+          <img src="{{ featured.imageUrl }}?w=800&auto=format" alt="{{ featured.title }}" />
+        {% endif %}
+        <div class="content">
+          <h3>{{ featured.title }}</h3>
+          <p><a href="/projects/{{ featured.slug }}/">Read more →</a></p>
+        </div>
+      </article>
     </div>
+    {% endif %}
   </section>
 
 
