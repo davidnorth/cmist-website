@@ -1,5 +1,8 @@
 header {
   background: var(--surface-container);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 header > div {
@@ -10,7 +13,9 @@ header > div {
 #key-info {
 }
 
-header nav, header nav ul {
+header nav {
+  display: flex;
+  align-items: center;
 }
 
 header nav ul {
@@ -22,9 +27,42 @@ header nav ul {
   max-height: 0;
   transition: max-height 0.5s ease;
   position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
   z-index: 9999;
   color: #496455;
+  background: var(--inverse-surface);
+  a, a:hover {
+    color: var(--inverse-on-surface);
+    opacity: 0.7;
+    display: block;
+  }
+  .active a, a:hover {
+    opacity: 1;
+  }
+  li {
+    padding: 10px 10px;
+  }
+  li:not(:last-child) {
+    border-bottom: 1px solid var(--surface-dim);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  header nav ul {
+    background: none;
+  }
+  header nav li {
+    a {
+      color: var(--on-surface);
+      opacity: 1;
+    }
+    &.active a {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+    }
+  }
 }
 
 nav input {
@@ -35,15 +73,9 @@ nav input:checked ~ ul {
 }
 nav input:checked ~ .nav-toggle-label span {
   background-image: url("/media/images/icons/cross.svg");
+  color: var(--on-surface);
 }
 
-header nav li {
-  padding: 10px 10px;
-  &.active a {
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
-  }
-}
 
 header nav a {
   text-decoration: none;
