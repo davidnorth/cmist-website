@@ -86,14 +86,24 @@ body {
 }
 
 
+article.with-photo-sidebar {
+  @media (width >= 760px) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
 .photo-sidebar {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 400px;
   img {
     border-radius: 8px;
   }
+  @media (width >= 760px) {
+    max-width: 400px;
+  }
+
 }
 
 

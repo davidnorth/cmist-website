@@ -49,7 +49,7 @@ header nav ul {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 760px) {
   header nav ul {
     background: none;
   }
@@ -88,7 +88,7 @@ header nav a:hover {
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 760px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -148,7 +148,7 @@ header .phone-number a {
 
 
 /* If screen size is more than 600px wide, set the font-size of <div> to 80px */
-@media screen and (min-width: 600px) {
+@media screen and (width >= 760px) {
   header input, .nav-toggle-label {
     display: none;
   }
