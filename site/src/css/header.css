@@ -54,7 +54,7 @@ header nav ul {
     background: none;
   }
   header nav li {
-    a {
+    a, a:hover {
       color: var(--on-surface);
       opacity: 1;
     }
