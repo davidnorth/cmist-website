@@ -1,5 +1,5 @@
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/media")
   eleventyConfig.addPassthroughCopy("./src/css")
@@ -8,7 +8,7 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "public",
+      output: "_site"
     }
   };
 };
