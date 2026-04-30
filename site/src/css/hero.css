@@ -1,4 +1,5 @@
 .hero {
+  background-color: var(--primary);
   background-image: url(/media/images/common/tool-wall2.jpg);
   background-size: cover;
   padding: 20px;
