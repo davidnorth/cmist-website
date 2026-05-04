@@ -1,0 +1,32 @@
+---
+title: Facilities
+layout: "base.njk"
+navActive: facilities
+---
+
+<section class="container mt-1">
+  <h1>Our Facilities</h1>
+  <p class="facilities-intro">We have a wide range of tools and workspaces available to our members — whether you're a seasoned craftsperson or trying something completely new. Come and see what takes your fancy.</p>
+
+  {% if facilities.length %}
+    <div class="facilities-list">
+      {% for facility in facilities %}
+        <article class="facility-row{% if loop.index % 2 == 0 %} facility-row--reverse{% endif %}">
+          {% if facility.imageUrl %}
+            <div class="facility-image">
+              <img src="{{ facility.imageUrl }}?w=800&auto=format" alt="{{ facility.title }}" />
+            </div>
+          {% endif %}
+          <div class="facility-content">
+            <h2>{{ facility.title }}</h2>
+            {% if facility.contentHtml %}
+              {{ facility.contentHtml | safe }}
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No facilities listed yet — check back soon.</p>
+  {% endif %}
+</section>

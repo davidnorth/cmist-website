@@ -11,9 +11,9 @@ const client = createClient({
 
 fetchAndWrite()
 
-console.log('[sanity] Listening for project changes...')
+console.log('[sanity] Listening for changes...')
 
-const subscription = client.listen('*[_type == "project"]').subscribe(event => {
+const subscription = client.listen('*[_type in ["project", "facility"]]').subscribe(event => {
   console.log(`[sanity] ${event.type} — "${event.result?.title ?? event.documentId}"`)
   fetchAndWrite().catch(console.error)
 })

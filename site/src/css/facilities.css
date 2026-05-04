@@ -1,0 +1,56 @@
+.facilities-intro {
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+}
+
+.facilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.facility-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.facility-image {
+  width: 100%;
+}
+
+.facility-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--box-radius);
+  display: block;
+}
+
+.facility-content h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 758px) {
+  .facility-row {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .facility-row--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .facility-image {
+    flex: 0 0 45%;
+  }
+
+  .facility-content {
+    flex: 1;
+  }
+}

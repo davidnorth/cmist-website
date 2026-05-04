@@ -1,0 +1,112 @@
+[
+  {
+    "content": [
+      {
+        "_key": "w1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "w1s1",
+            "_type": "span",
+            "marks": [],
+            "text": "Our woodwork workshop is fully equipped with hand tools, power tools, and benches for all levels of experience. Members work on everything from small repairs and furniture restoration to bespoke joinery projects. Whether you're a seasoned carpenter or picking up a chisel for the first time, there's always someone on hand to share knowledge and guidance."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/98ba20e5bb9a1a5c60200eecbb11b879fa113918-1142x882.png",
+    "slug": "woodwork",
+    "title": "Woodwork",
+    "contentHtml": "<p>Our woodwork workshop is fully equipped with hand tools, power tools, and benches for all levels of experience. Members work on everything from small repairs and furniture restoration to bespoke joinery projects. Whether you&#x27;re a seasoned carpenter or picking up a chisel for the first time, there&#x27;s always someone on hand to share knowledge and guidance.</p>"
+  },
+  {
+    "content": [
+      {
+        "_key": "m1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "m1s1",
+            "_type": "span",
+            "marks": [],
+            "text": "The metalwork area houses welding equipment, an angle grinder, vices, and a range of hand tools for working with steel, aluminium, and other metals. Members have fabricated garden furniture, repaired gates and railings, and built custom brackets and fittings. Safety inductions are provided before using the welding equipment."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "imageUrl": null,
+    "slug": "metalwork",
+    "title": "Metalwork",
+    "contentHtml": "<p>The metalwork area houses welding equipment, an angle grinder, vices, and a range of hand tools for working with steel, aluminium, and other metals. Members have fabricated garden furniture, repaired gates and railings, and built custom brackets and fittings. Safety inductions are provided before using the welding equipment.</p>"
+  },
+  {
+    "content": [
+      {
+        "_key": "t1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "t1s1",
+            "_type": "span",
+            "marks": [],
+            "text": "Our textile crafts space includes sewing machines, an overlocker, and materials for embroidery, weaving, and upholstery. Projects have ranged from mending and alterations to making bags, cushion covers, and soft furnishings. It's a relaxed, sociable space that welcomes complete beginners and experienced crafters alike."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/a48a860caa6117742aa8180fac0d29097c0fb4d4-1160x1522.png",
+    "slug": "textile-crafts",
+    "title": "Textile Crafts",
+    "contentHtml": "<p>Our textile crafts space includes sewing machines, an overlocker, and materials for embroidery, weaving, and upholstery. Projects have ranged from mending and alterations to making bags, cushion covers, and soft furnishings. It&#x27;s a relaxed, sociable space that welcomes complete beginners and experienced crafters alike.</p>"
+  },
+  {
+    "content": [
+      {
+        "_key": "p1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "p1s1",
+            "_type": "span",
+            "marks": [],
+            "text": "The pottery studio is equipped with a kick wheel, an electric wheel, a kiln, and a full range of hand-building tools and glazes. Members create functional pieces such as mugs, bowls, and vases as well as sculptural and decorative work. Regular firing sessions are scheduled throughout the month."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/f32814bc579a24d13d789b4a20ebb1fd09616075-1172x1274.png",
+    "slug": "pottery",
+    "title": "Pottery",
+    "contentHtml": "<p>The pottery studio is equipped with a kick wheel, an electric wheel, a kiln, and a full range of hand-building tools and glazes. Members create functional pieces such as mugs, bowls, and vases as well as sculptural and decorative work. Regular firing sessions are scheduled throughout the month.</p>"
+  },
+  {
+    "content": [
+      {
+        "_key": "d1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "d1s1",
+            "_type": "span",
+            "marks": [],
+            "text": "Our digital fabrication suite features FDM 3D printers and a CO₂ laser cutter, opening up possibilities for precision parts, signage, enclosures, and decorative items. Members have used these machines to produce replacement components, personalised gifts, and prototypes for community projects. Training sessions cover design software and safe machine operation."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/252a53683d218e8285e9bf8b49368917dd1f43b9-1062x856.png",
+    "slug": "3d-printing-laser-cutter",
+    "title": "3D Printing & Laser Cutter",
+    "contentHtml": "<p>Our digital fabrication suite features FDM 3D printers and a CO₂ laser cutter, opening up possibilities for precision parts, signage, enclosures, and decorative items. Members have used these machines to produce replacement components, personalised gifts, and prototypes for community projects. Training sessions cover design software and safe machine operation.</p>"
+  }
+]

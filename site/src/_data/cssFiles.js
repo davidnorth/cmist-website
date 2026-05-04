@@ -9,4 +9,5 @@ module.exports = [
   "forms",
   "contact",
   "testimonial",
+  "facilities",
 ];
