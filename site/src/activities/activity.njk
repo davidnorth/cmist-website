@@ -1,0 +1,26 @@
+---
+pagination:
+  data: facilities
+  size: 1
+  alias: facility
+permalink: "activities/{{ facility.slug }}/"
+layout: "base.njk"
+eleventyComputed:
+  title: "{{ facility.title }}"
+---
+
+<section class="container mt-1">
+
+  {% if facility.imageUrl %}
+    <img src="{{ facility.imageUrl }}?w=800&auto=format&fit=max" alt="{{ facility.title }}" />
+  {% endif %}
+
+  <h1>{{ facility.title }}</h1>
+
+  <div class="facility-content">
+    {{ facility.contentHtml | safe }}
+  </div>
+
+  <p><a href="/activities/">← Back to activities</a></p>
+
+</section>

@@ -1,11 +1,11 @@
 ---
-title: Facilities
+title: Activities
 layout: "base.njk"
-navActive: facilities
+navActive: activities
 ---
 
 <section class="container mt-1">
-  <h1>Our Facilities</h1>
+  <h1>Our Activities</h1>
   <p class="facilities-intro">We have a wide range of tools and workspaces available to our members — whether you're a seasoned craftsperson or trying something completely new. Come and see what takes your fancy.</p>
 
   {% if facilities.length %}
@@ -14,11 +14,13 @@ navActive: facilities
         <article class="facility-row{% if loop.index % 2 == 0 %} facility-row--reverse{% endif %}">
           {% if facility.imageUrl %}
             <div class="facility-image">
-              <img src="{{ facility.imageUrl }}?w=800&auto=format" alt="{{ facility.title }}" />
+              <a href="/activities/{{ facility.slug }}/">
+                <img src="{{ facility.imageUrl }}?w=800&auto=format" alt="{{ facility.title }}" />
+              </a>
             </div>
           {% endif %}
           <div class="facility-content">
-            <h2>{{ facility.title }}</h2>
+            <h2><a href="/activities/{{ facility.slug }}/">{{ facility.title }}</a></h2>
             {% if facility.contentHtml %}
               {{ facility.contentHtml | safe }}
             {% endif %}
@@ -27,6 +29,6 @@ navActive: facilities
       {% endfor %}
     </div>
   {% else %}
-    <p>No facilities listed yet — check back soon.</p>
+    <p>No activities listed yet — check back soon.</p>
   {% endif %}
 </section>
