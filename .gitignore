@@ -5,3 +5,6 @@ site/_site
 
 cms/node_modules
 cms/public/*
+
+art/
+content/

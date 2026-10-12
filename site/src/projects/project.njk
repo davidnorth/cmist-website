@@ -11,8 +11,12 @@ eleventyComputed:
 
 <section class="container mt-1">
 
-  {% if project.imageUrl %}
-    <img src="{{ project.imageUrl }}?w=500&auto=format&fit=max" alt="{{ project.title }}" />
+  {% if project.images.length %}
+    <div class="image-gallery">
+      {% for image in project.images %}
+        <img src="{{ image.url }}?w=800&auto=format&fit=max" alt="{{ project.title }}" />
+      {% endfor %}
+    </div>
   {% endif %}
 
   <h1>{{ project.title }}</h1>

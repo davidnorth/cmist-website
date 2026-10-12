@@ -52,11 +52,12 @@ yarn deploy      # deploy studio to Sanity-hosted URL
 Sanity project ID: `ah6pphsm`, dataset: `production`.
 
 Current schema types (in `cms/schemaTypes/`):
-- `project` — title, slug (from title), content (portable text / rich text), mainImage (with hotspot)
+- `project` — title, slug (from title), content (portable text / rich text), images (sortable image gallery, with hotspot)
+- `facility` — title, slug (from title), content (portable text / rich text), images (sortable image gallery, with hotspot)
 
 Rich text (`content` field) is converted to HTML in `scripts/sanity-fetch.js` using `@portabletext/to-html` and stored as `contentHtml` alongside the raw blocks.
 
-**Images** are served directly from the Sanity CDN. Append `?w=600&auto=format` (or similar) to the `imageUrl` for automatic resizing and format optimisation.
+**Images** are served directly from the Sanity CDN. `scripts/sanity-fetch.js` flattens each document's `images` array to `[{ _key, url }]` in the editor-defined order (images without an asset are dropped), and listing pages use the first image as the cover. Append `?w=600&auto=format` (or similar) to an image `url` for automatic resizing and format optimisation.
 
 ## Environment variables
 

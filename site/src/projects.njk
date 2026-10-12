@@ -11,8 +11,8 @@ navActive: projects
     <div class="md:grid-cols-3 mb-1">
       {% for project in projects %}
         <article class="card">
-          {% if project.imageUrl %}
-            <img src="{{ project.imageUrl }}?w=600&auto=format" alt="{{ project.title }}" />
+          {% if project.images[0].url %}
+            <img src="{{ project.images[0].url }}?w=600&auto=format" alt="{{ project.title }}" />
           {% endif %}
           <div class="content">
             <h3>{{ project.title }}</h3>

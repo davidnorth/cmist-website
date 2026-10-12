@@ -53,8 +53,8 @@ navActive: home
     <div class="flex-min-350">
       <h2>Featured project</h2>
       <article class="card">
-        {% if featured.imageUrl %}
-          <img src="{{ featured.imageUrl }}?w=800&auto=format" alt="{{ featured.title }}" />
+        {% if featured.images[0].url %}
+          <img src="{{ featured.images[0].url }}?w=800&auto=format" alt="{{ featured.title }}" />
         {% endif %}
         <div class="content">
           <h3>{{ featured.title }}</h3>
@@ -74,6 +74,7 @@ navActive: home
   <p>CMIST currently meets from
     10:30am - 3:30pm:
     Tuesdays, Thursdays and Fridays.</p>
+  <p>Download the <a href="/media/documents/MembershipForm2026.pdf">2026 membership form (PDF)</a> and bring it along when you visit.</p>
 </section>
 
 

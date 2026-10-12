@@ -44,7 +44,7 @@ Each project is a story about work the Shed has done (for example, "Workshop Res
 | **Headline** | The project's title. Required. |
 | **URL Slug** | The web address it appears at. This is filled in automatically from the headline. |
 | **Body Content** | The main text, written in a rich-text editor. |
-| **Featured Image** | The photo shown with the project. |
+| **Featured Images** | One or more photos shown with the project. The first image is used as the cover on the projects list and homepage. |
 
 ### Facilities
 
@@ -55,7 +55,7 @@ Each facility describes a workshop, machine, or space available to members. It h
 | **Name** | The facility's name. Required. |
 | **URL Slug** | Filled in automatically from the name. |
 | **Description** | The main text, written in a rich-text editor. |
-| **Photo** | The image shown with the facility. |
+| **Photos** | One or more images shown with the facility. The first image is used as the cover on the activities page. |
 
 ### Steps for a typical edit
 
@@ -68,8 +68,9 @@ Each facility describes a workshop, machine, or space available to members. It h
 ### Adding images
 
 - Images are uploaded and stored in the CMS's media library.
-- When you add a **Featured Image** or **Photo**, you can browse the media library or upload a new image.
+- When you add an image to **Featured Images** or **Photos**, you can browse the media library or upload a new image.
 - You can crop the image using the small handles in the editor.
+- To change the order, drag an image by its handle — the first image in the list is used as the cover on listing pages.
 - Images are served automatically by Sanity, so you don't need to resize them yourself.
 
 ## What can't be edited in the CMS

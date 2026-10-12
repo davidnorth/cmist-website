@@ -9,21 +9,15 @@ navActive: activities
   <p class="facilities-intro">We have a wide range of tools and workspaces available to our members — whether you're a seasoned craftsperson or trying something completely new. Come and see what takes your fancy.</p>
 
   {% if facilities.length %}
-    <div class="facilities-list">
+    <div class="md:grid-cols-3 mb-1">
       {% for facility in facilities %}
-        <article class="facility-row{% if loop.index % 2 == 0 %} facility-row--reverse{% endif %}">
-          {% if facility.imageUrl %}
-            <div class="facility-image">
-              <a href="/activities/{{ facility.slug }}/">
-                <img src="{{ facility.imageUrl }}?w=800&auto=format" alt="{{ facility.title }}" />
-              </a>
-            </div>
+        <article class="card">
+          {% if facility.images[0].url %}
+            <img src="{{ facility.images[0].url }}?w=600&auto=format" alt="{{ facility.title }}" />
           {% endif %}
-          <div class="facility-content">
-            <h2><a href="/activities/{{ facility.slug }}/">{{ facility.title }}</a></h2>
-            {% if facility.contentHtml %}
-              {{ facility.contentHtml | safe }}
-            {% endif %}
+          <div class="content">
+            <h3>{{ facility.title }}</h3>
+            <a href="/activities/{{ facility.slug }}/">Read more</a>
           </div>
         </article>
       {% endfor %}

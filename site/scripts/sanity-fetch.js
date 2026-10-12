@@ -21,7 +21,7 @@ async function fetchAndWrite() {
         title,
         "slug": slug.current,
         content,
-        "imageUrl": mainImage.asset->url
+        "images": images[]{ "_key": _key, "url": asset->url }
       }
     `),
     client.fetch(`
@@ -29,22 +29,23 @@ async function fetchAndWrite() {
         title,
         "slug": slug.current,
         content,
-        "imageUrl": mainImage.asset->url
+        "images": images[]{ "_key": _key, "url": asset->url }
       }
     `),
   ])
 
-  const projectData = projects.map(p => ({
-    ...p,
-    contentHtml: p.content ? toHTML(p.content) : '',
-  }))
+  const normalise = doc => ({
+    ...doc,
+    // Images are stored in editor-defined order; the first is the cover image.
+    images: (doc.images ?? []).filter(image => image.url),
+    contentHtml: doc.content ? toHTML(doc.content) : '',
+  })
+
+  const projectData = projects.map(normalise)
   fs.writeFileSync(projectsFile, JSON.stringify(projectData, null, 2))
   console.log(`[sanity] fetched ${projectData.length} project(s)`)
 
-  const facilityData = facilities.map(f => ({
-    ...f,
-    contentHtml: f.content ? toHTML(f.content) : '',
-  }))
+  const facilityData = facilities.map(normalise)
   fs.writeFileSync(facilitiesFile, JSON.stringify(facilityData, null, 2))
   console.log(`[sanity] fetched ${facilityData.length} facilit(ies)`)
 }

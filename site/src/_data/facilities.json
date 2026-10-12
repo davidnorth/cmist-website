@@ -16,7 +16,12 @@
         "style": "normal"
       }
     ],
-    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/98ba20e5bb9a1a5c60200eecbb11b879fa113918-1142x882.png",
+    "images": [
+      {
+        "_key": "2fd52e17-d7c1-4e89-b957-236df2f6bbe0",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/98ba20e5bb9a1a5c60200eecbb11b879fa113918-1142x882.png"
+      }
+    ],
     "slug": "woodwork",
     "title": "Woodwork",
     "contentHtml": "<p>Our woodwork workshop is fully equipped with hand tools, power tools, and benches for all levels of experience. Members work on everything from small repairs and furniture restoration to bespoke joinery projects. Whether you&#x27;re a seasoned carpenter or picking up a chisel for the first time, there&#x27;s always someone on hand to share knowledge and guidance.</p>"
@@ -38,7 +43,12 @@
         "style": "normal"
       }
     ],
-    "imageUrl": null,
+    "images": [
+      {
+        "_key": "b74e1ea8-759d-4b34-a7ad-6850b320166e",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/a0d8fe2cd157df8845bad9b693bb20a09c32fa67-2190x1542.png"
+      }
+    ],
     "slug": "metalwork",
     "title": "Metalwork",
     "contentHtml": "<p>The metalwork area houses welding equipment, an angle grinder, vices, and a range of hand tools for working with steel, aluminium, and other metals. Members have fabricated garden furniture, repaired gates and railings, and built custom brackets and fittings. Safety inductions are provided before using the welding equipment.</p>"
@@ -60,7 +70,12 @@
         "style": "normal"
       }
     ],
-    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/a48a860caa6117742aa8180fac0d29097c0fb4d4-1160x1522.png",
+    "images": [
+      {
+        "_key": "641d3601-0340-4c4b-b06e-4e75d20dba18",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/a48a860caa6117742aa8180fac0d29097c0fb4d4-1160x1522.png"
+      }
+    ],
     "slug": "textile-crafts",
     "title": "Textile Crafts",
     "contentHtml": "<p>Our textile crafts space includes sewing machines, an overlocker, and materials for embroidery, weaving, and upholstery. Projects have ranged from mending and alterations to making bags, cushion covers, and soft furnishings. It&#x27;s a relaxed, sociable space that welcomes complete beginners and experienced crafters alike.</p>"
@@ -82,7 +97,16 @@
         "style": "normal"
       }
     ],
-    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/f32814bc579a24d13d789b4a20ebb1fd09616075-1172x1274.png",
+    "images": [
+      {
+        "_key": "3b0642b2124b",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/c546c637efcf206012e8457b28db2d52fc5f5446-900x1600.jpg"
+      },
+      {
+        "_key": "a979618b-d02e-4165-aa76-e72f7d73b798",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/f32814bc579a24d13d789b4a20ebb1fd09616075-1172x1274.png"
+      }
+    ],
     "slug": "pottery",
     "title": "Pottery",
     "contentHtml": "<p>The pottery studio is equipped with a kick wheel, an electric wheel, a kiln, and a full range of hand-building tools and glazes. Members create functional pieces such as mugs, bowls, and vases as well as sculptural and decorative work. Regular firing sessions are scheduled throughout the month.</p>"
@@ -97,16 +121,75 @@
             "_key": "d1s1",
             "_type": "span",
             "marks": [],
-            "text": "Our digital fabrication suite features FDM 3D printers and a CO₂ laser cutter, opening up possibilities for precision parts, signage, enclosures, and decorative items. Members have used these machines to produce replacement components, personalised gifts, and prototypes for community projects. Training sessions cover design software and safe machine operation."
+            "text": "Our digital fabrication suite features FDM 3D printers and a  laser cutter, opening up possibilities for precision parts, signage, enclosures, and decorative items. Members have used these machines to produce replacement components, personalised gifts, and prototypes for community projects. Training sessions cover design software and safe machine operation."
           }
         ],
         "markDefs": [],
         "style": "normal"
       }
     ],
-    "imageUrl": "https://cdn.sanity.io/images/ah6pphsm/production/252a53683d218e8285e9bf8b49368917dd1f43b9-1062x856.png",
+    "images": [
+      {
+        "_key": "e4b1d785-d1b6-4f63-9065-fede39a419f7",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/2908994ec05d2fe37d8bffe6f1d9fb8fe7c2e567-3024x4032.jpg"
+      }
+    ],
     "slug": "3d-printing-laser-cutter",
     "title": "3D Printing & Laser Cutter",
-    "contentHtml": "<p>Our digital fabrication suite features FDM 3D printers and a CO₂ laser cutter, opening up possibilities for precision parts, signage, enclosures, and decorative items. Members have used these machines to produce replacement components, personalised gifts, and prototypes for community projects. Training sessions cover design software and safe machine operation.</p>"
+    "contentHtml": "<p>Our digital fabrication suite features FDM 3D printers and a&nbsp; laser cutter, opening up possibilities for precision parts, signage, enclosures, and decorative items. Members have used these machines to produce replacement components, personalised gifts, and prototypes for community projects. Training sessions cover design software and safe machine operation.</p>"
+  },
+  {
+    "content": [
+      {
+        "_key": "56151295a46d",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "511ec0d2c7be",
+            "_type": "span",
+            "marks": [],
+            "text": "About glasswork"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "images": [
+      {
+        "_key": "f6c3ce9f-e3ed-4445-b87b-d3b874c3f1a2",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/4e423b549f7deef6b485c5127177c7190c337a38-1536x2048.jpg"
+      }
+    ],
+    "slug": "glasswork",
+    "title": "Glasswork",
+    "contentHtml": "<p>About glasswork</p>"
+  },
+  {
+    "content": [
+      {
+        "_key": "fb29962fc975",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "83db96288aad",
+            "_type": "span",
+            "marks": [],
+            "text": "Example of sculptures created in-house"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "images": [
+      {
+        "_key": "d9e8dc7c-88e4-4122-bb55-ea5df6c24efc",
+        "url": "https://cdn.sanity.io/images/ah6pphsm/production/eff30797250ad3ba5244089b05afacca9a551816-3024x4032.jpg"
+      }
+    ],
+    "slug": "sculpting",
+    "title": "Sculpting",
+    "contentHtml": "<p>Example of sculptures created in-house</p>"
   }
 ]
