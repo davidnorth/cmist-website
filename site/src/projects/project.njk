@@ -5,26 +5,33 @@ pagination:
   alias: project
 permalink: "projects/{{ project.slug }}/"
 layout: "base.njk"
+lightbox: true
 eleventyComputed:
   title: "{{ project.title }}"
 ---
 
 <section class="container mt-1">
 
-  {% if project.images.length %}
-    <div class="image-gallery">
-      {% for image in project.images %}
-        <img src="{{ image.url }}?w=800&auto=format&fit=max" alt="{{ project.title }}" />
-      {% endfor %}
+  <article class="with-photo-sidebar gap-30 mt_30 mb_30">
+    <div class="flex-grow">
+      <h1>{{ project.title }}</h1>
+
+      <div class="project-content">
+        {{ project.contentHtml | safe }}
+      </div>
+
+      <p class="back-link"><a href="/projects/">← Back to projects</a></p>
     </div>
-  {% endif %}
 
-  <h1>{{ project.title }}</h1>
-
-  <div class="project-content">
-    {{ project.contentHtml | safe }}
-  </div>
-
-  <p><a href="/projects/">← Back to projects</a></p>
+    {% if project.images.length %}
+      <div class="photo-sidebar detail-photos">
+        {% for image in project.images %}
+          <a class="detail-photo" href="{{ image.url }}?w=1600&auto=format&fit=max">
+            <img src="{{ image.url }}?w=800&auto=format&fit=max" alt="{{ project.title }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </article>
 
 </section>

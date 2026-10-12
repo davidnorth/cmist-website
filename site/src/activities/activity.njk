@@ -5,26 +5,33 @@ pagination:
   alias: facility
 permalink: "activities/{{ facility.slug }}/"
 layout: "base.njk"
+lightbox: true
 eleventyComputed:
   title: "{{ facility.title }}"
 ---
 
 <section class="container mt-1">
 
-  {% if facility.images.length %}
-    <div class="image-gallery">
-      {% for image in facility.images %}
-        <img src="{{ image.url }}?w=800&auto=format&fit=max" alt="{{ facility.title }}" />
-      {% endfor %}
+  <article class="with-photo-sidebar gap-30 mt_30 mb_30">
+    <div class="flex-grow">
+      <h1>{{ facility.title }}</h1>
+
+      <div class="facility-content">
+        {{ facility.contentHtml | safe }}
+      </div>
+
+      <p class="back-link"><a href="/activities/">← Back to activities</a></p>
     </div>
-  {% endif %}
 
-  <h1>{{ facility.title }}</h1>
-
-  <div class="facility-content">
-    {{ facility.contentHtml | safe }}
-  </div>
-
-  <p><a href="/activities/">← Back to activities</a></p>
+    {% if facility.images.length %}
+      <div class="photo-sidebar detail-photos">
+        {% for image in facility.images %}
+          <a class="detail-photo" href="{{ image.url }}?w=1600&auto=format&fit=max">
+            <img src="{{ image.url }}?w=800&auto=format&fit=max" alt="{{ facility.title }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </article>
 
 </section>

@@ -1,14 +1,105 @@
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+/* Detail pages (activities & projects): photo sidebar + lightbox */
+
+.back-link {
+  margin-top: 2rem;
 }
 
-.image-gallery img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--box-radius);
+.back-link a {
+  color: var(--primary);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Keep the sidebar at its intended 400px (the <a> wrapper would
+   otherwise let it shrink below the images' width). */
+.detail-photos {
+  @media (width >= 760px) {
+    flex: 0 0 400px;
+  }
+}
+
+/* Two or more photos flow into a compact grid; a single photo keeps
+   the full sidebar width (see .photo-sidebar). */
+.photo-sidebar.detail-photos:has(a + a) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.detail-photos a {
   display: block;
+}
+
+.detail-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 3px 2px 11px rgb(0 0 0 / 0.15);
+  cursor: zoom-in;
+}
+
+/* Lightbox */
+
+dialog.lightbox {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+dialog.lightbox::backdrop {
+  background: rgb(23 49 36 / 0.85);
+}
+
+.lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(90vw, 1200px);
+  max-height: 85vh;
+  border-radius: var(--box-radius);
+}
+
+.lightbox button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.3);
+}
+
+.lightbox button:hover {
+  background: #fff;
+}
+
+.lightbox-close {
+  top: -14px;
+  right: -14px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev {
+  left: -14px;
+}
+
+.lightbox-next {
+  right: -14px;
 }
