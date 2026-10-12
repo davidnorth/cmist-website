@@ -25,10 +25,17 @@ export const facilityType = defineType({
       of: [{ type: 'block' }],
     }),
     defineField({
-      name: 'mainImage',
-      type: 'image',
-      title: 'Photo',
-      options: { hotspot: true },
+      name: 'images',
+      type: 'array',
+      title: 'Photos',
+      description: 'Drag to reorder. The first image is used as the cover on listing pages.',
+      options: { layout: 'grid' },
+      of: [
+        {
+          type: 'image',
+          options: { hotspot: true },
+        },
+      ],
     }),
   ],
 })

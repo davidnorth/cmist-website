@@ -26,10 +26,17 @@ export const projectType = defineType({
       of: [{ type: 'block' }], // This enables the Rich Text editor
     }),
     defineField({
-      name: 'mainImage',
-      type: 'image',
-      title: 'Featured Image',
-      options: { hotspot: true }, // Allows editors to crop the image in the UI
+      name: 'images',
+      type: 'array',
+      title: 'Featured Images',
+      description: 'Drag to reorder. The first image is used as the cover on listing pages.',
+      options: { layout: 'grid' },
+      of: [
+        {
+          type: 'image',
+          options: { hotspot: true }, // Allows editors to crop the image in the UI
+        },
+      ],
     }),
   ],
 })
